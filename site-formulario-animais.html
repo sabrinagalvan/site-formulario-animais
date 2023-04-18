@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/site-formulario-animais.css">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Chewy&family=DynaPuff&family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/icone.png">
+
+    <title>Afinidade com animais</title>
+</head>
+<body class="imagem">
+
+    <div id="question1">
+        <h1 class="titulo">Afinidade com animais!</h1>
+        <p>Você tem mais afinidade com qual animal?</p>
+        <form>
+            <input type="radio" name="animalType" value="Dog" onclick="showQuestion2()"> Dog<br>
+            <input type="radio" name="animalType" value="Cat" onclick="showQuestion2()"> Cat<br>
+        </form>
+    </div>
+
+    <div id="question2" style="display:none;">
+        <p>Quer "adotar" ou "comprar"?</p>
+        <form>
+            <input type="radio" name="acquisitionMethod" value="Adopt" onclick="showQuestion3()"> Adotar<br>
+            <input type="radio" name="acquisitionMethod" value="Buy" onclick="showQuestion3()"> Comprar<br>
+        </form>
+    </div>
+
+    <div id="question3" style="display:none;">
+        <p>Quantos animais você quer ter?</p>
+        <form>
+            <input type="radio" name="animalCount" value="1" onclick="showQuestion4()"> 1 animal<br>
+            <input type="radio" name="animalCount" value="2+" onclick="showQuestion4()"> 2 ou mais animais<br>
+        </form>
+    </div>
+
+    <div id="question4" style="display:none;">
+        <p>Legal, vamos continuar para nossa última pergunta:</p>
+        <p>Quais raças você gostaria de ter?</p>
+        <form>
+            <input type="text" name="breeds" id="breeds"><br>
+            <input type="button" value="Enviar" onclick="showMessage()">
+        </form>
+    </div>
+
+    <div id="message" style="display:none;"></div>
+
+    <script>
+        function showQuestion2() {
+            document.getElementById("question2").style.display = "block";
+        }
+
+        function showQuestion3() {
+            document.getElementById("question3").style.display = "block";
+        }
+
+        function showQuestion4() {
+            document.getElementById("question4").style.display = "block";
+        }
+
+        function showMessage() {
+            var breeds = document.getElementById("breeds").value;
+            document.getElementById("message").innerHTML = "<br>Raças escolhidas: " + breeds + ".";
+            document.getElementById("message").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>

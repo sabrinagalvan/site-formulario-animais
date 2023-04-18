@@ -1,0 +1,35 @@
+body {
+    margin-top: 60px;
+    font-family: 'Black Han Sans', sans-serif;
+    font-family: 'Chewy', cursive;
+    font-family: 'DynaPuff', cursive;
+    font-family: 'Lilita One', cursive;
+    text-align: center;
+}
+
+.imagem {
+    width: 100vw;
+    height: 100vh;
+    background: url(../images/animais.jpg);
+    background-size: cover;
+}
+
+.titulo {
+    color: rgb(255, 255, 255);
+    font-size: 65px;
+    font-weight: bold;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #000;
+}
+
+p {
+    margin-top: 40px;
+    font-size: 25px;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #ffffff;
+}
+
+form, div, input {
+    margin-top: 15px;
+    font-size: 30px;
+}
